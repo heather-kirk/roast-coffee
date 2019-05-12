@@ -2,13 +2,21 @@ class CoffeeController < ApplicationController
   
   get '/coffee/new' do
     #new order for the coffee 
-    erb :new 
+    if logged_in?
+      erb :'/coffees/new' 
+    else
+      redirect 'users/login'
+    end 
   end
   
   get '/coffees' do
     #track all their orders
-    @coffees = Coffee.all
-    erb :coffees
+    if logged_in?
+      @coffees = Coffee.all
+      erb :coffees
+    else 
+      redirect 'users/login'
+    end 
   end 
   
   post '/coffees' do
@@ -18,28 +26,45 @@ class CoffeeController < ApplicationController
   end 
   
   get '/coffees/:id' do
-    @coffee = Coffee.find(params[:id])
-    erb :show
-  end 
+    if logged_in?
+      @coffee = Coffee.find(params[:id])
+      erb :'/coffees/show'
+    else 
+      redirect 'users/login'
+    end 
+  end
   
   get '/coffees/:id/edit' do
     #edit order
-    @coffee = Coffee.find(params[:id])
-    erb :edit
-  end 
+    if logged_in?
+      @coffee = Coffee.find(params[:id])
+      erb :'/coffees/edit'
+    else
+      redirect
+      erb :'users/login'
+    end 
+  end
   
   patch '/coffees/:id/edit' do
     #user submitted info to edit the order
-    @coffee = Coffee.find(params[:id])
-    @coffee.update
-    @coffee.save
-    redirect '/coffees/:id'
-  end 
+    if logged_in?
+      @coffee = Coffee.find(params[:id])
+      @coffee.update
+      @coffee.save
+      redirect '/coffees/:id'
+    else 
+      redirect '/login'
+    end 
+  end
   
   delete '/coffees/:id/edit' do
     #delete order
-    @coffee = Coffee.find(params[:id])
-    @coffee.delete
-    redirect '/coffees'
+    if logged_in?
+      @coffee = Coffee.find(params[:id])
+      @coffee.delete
+      redirect '/coffees'
+    else 
+      redirect '/login'
+    end 
   end 
 end 
