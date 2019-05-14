@@ -67,4 +67,6 @@ class CoffeeController < ApplicationController
       redirect '/login'
     end 
   end 
+  
+ 
 end 

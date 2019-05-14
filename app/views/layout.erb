@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <header>
+<html lang="en">
+  <head>
+    <title>Custom Coffee Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    </head>
+    <div id="logo">
+      <img src="/images/logo.jpg" alt="logo">
     <nav>
-      <li>Discover</li>
-      <li>Location</li>
-      <li>About</li>
+      <ul>
+      <li><a href="/discover.erb">Discover</a></li>
+      <li><a href="/location.erb">Location</a></li>
+      <li><a href="/about.erb">About</a></li>
+      </ul>
+      </nav>
+      </div>
       <body>
+        
       <%=yield %>
-    </nav>
+    
     </body>
-     </header>
 </html>

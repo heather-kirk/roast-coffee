@@ -13,6 +13,18 @@ class ApplicationController < Sinatra::Base
       erb :index
     end 
     
+     get '/discover' do
+    erb :'/discover'
+  end 
+  
+  get '/location' do
+    erb :'/location'
+  end 
+  
+  get '/about' do
+    erb :'/about'
+  end 
+    
   helpers do 
   
   def is_logged_in?(session)
