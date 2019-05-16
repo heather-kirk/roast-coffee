@@ -11,8 +11,9 @@ class UsersController < ApplicationController
   end
   
   post '/signup' do
-    if !params[:username].empty? && !params[:password].empty?
-      @user = User.create(:username => params[:username], :password => params[:password])
+    if params[:username] != "" && params[:password] != ""
+      @user = User.create(username: params[:username], password: params[:password])
+      binding.pry
       session[:user_id] = @user.id
       redirect '/coffees'
     else 
