@@ -26,7 +26,7 @@ class CoffeeController < ApplicationController
   post '/coffees' do
     @coffees = Coffee.create(flavor: params[:flavor], price: params[:price])
     @coffees.save
-    redirect '/'
+    redirect '/coffees'
   end 
   
   get '/coffees/:id' do
@@ -52,7 +52,7 @@ class CoffeeController < ApplicationController
     end 
   end
   
-  patch '/coffees/:id/edit' do
+    patch '/coffees/:id/edit' do
     #user submitted info to edit the order
     if logged_in? && current_user
       @coffee = Coffee.find_by_id(params[:id])
