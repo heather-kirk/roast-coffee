@@ -58,7 +58,6 @@ class CoffeeController < ApplicationController
       @coffee = Coffee.find_by_id(params[:id])
       @user = current_user
       session[:user_id] = @user.id
-      @coffee.update
       @coffee.save
       redirect '/coffees/:id'
     else 
