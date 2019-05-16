@@ -1,0 +1,8 @@
+<h2>Welcome</h2>
+<h3> <%= @coffee.flavor %></h3>
+<h3> <%= @coffee.price %></h3>
+
+<form action="/coffees/<%=@coffee.id%>/delete">
+<input type="hidden" id="hidden" name="_method" value="Delete">
+<input type="submit" value="Delete">
+  </form>

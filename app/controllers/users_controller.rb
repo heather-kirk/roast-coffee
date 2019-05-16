@@ -4,17 +4,19 @@ class UsersController < ApplicationController
     if !logged_in?
       erb :'/users/signup'
     else
+      @user = current_user
+      session[:user_id] = @user.id 
       redirect '/coffees'
     end
   end
   
   post '/signup' do
-    @user = User.new(:username => params[:username], :password => params[:password])
-    
-    if user.save && !user.username.empty?
-      redirect '/login'
+    if !params[:username].empty? && !params[:password].empty?
+      @user = User.create(:username => params[:username], :password => params[:password])
+      session[:user_id] = @user.id
+      redirect '/coffees'
     else 
-      redirect '/'
+      redirect '/signup'
     end 
   end 
   
