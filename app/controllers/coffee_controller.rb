@@ -1,11 +1,11 @@
 class CoffeeController < ApplicationController
   
-  get '/coffee/new' do
+  get '/coffees/new' do
     #new order for the coffee 
     if logged_in? && current_user
       @user = current_user
       session[:user_id] = @user.id
-      erb :'/coffees/new' 
+      erb :'/coffee/new' 
     else
       redirect '/login'
     end 
@@ -31,10 +31,10 @@ class CoffeeController < ApplicationController
   
   get '/coffees/:id' do
     if logged_in? && current_user
-      @coffee = Coffee.find(params[:id])
+      @coffee = Coffee.find_by_id(params[:id])
       @user = current_user
       session[:user_id] = @user.id
-      erb :'/coffees/show'
+      erb :'/coffee/show'
     else 
       redirect '/login'
     end 
@@ -43,10 +43,10 @@ class CoffeeController < ApplicationController
   get '/coffees/:id/edit' do
     #edit order
     if logged_in? && current_user
-      @coffee = Coffee.find(params[:id])
+      @coffee = Coffee.find_by_id(params[:id])
       @user = current_user
       session[:user_id] = @user.id
-      erb :'/coffees/edit'
+      erb :'/coffee/edit'
     else
       erb :'users/login'
     end 
@@ -55,7 +55,7 @@ class CoffeeController < ApplicationController
   patch '/coffees/:id/edit' do
     #user submitted info to edit the order
     if logged_in? && current_user
-      @coffee = Coffee.find(params[:id])
+      @coffee = Coffee.find_by_id(params[:id])
       @user = current_user
       session[:user_id] = @user.id
       @coffee.update
@@ -69,7 +69,7 @@ class CoffeeController < ApplicationController
   delete '/coffees/:id/edit' do
     #delete order
     if logged_in? && current_user
-      @coffee = Coffee.find(params[:id])
+      @coffee = Coffee.find_by_id(params[:id])
       @user = current_user
       session[:user_id] = @user.id
       @coffee.delete
