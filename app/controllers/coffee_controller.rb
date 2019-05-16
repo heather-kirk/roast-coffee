@@ -7,7 +7,7 @@ class CoffeeController < ApplicationController
       session[:user_id] = @user.id
       erb :'/coffees/new' 
     else
-      redirect 'users/login'
+      redirect '/login'
     end 
   end
   
@@ -17,9 +17,9 @@ class CoffeeController < ApplicationController
       @coffees = Coffee.all
       @user = current_user
       session[:user_id] = @user.id
-      erb :coffees
+      erb :'/coffee/coffees'
     else 
-      redirect 'users/login'
+      redirect '/login'
     end 
   end 
   
@@ -36,7 +36,7 @@ class CoffeeController < ApplicationController
       session[:user_id] = @user.id
       erb :'/coffees/show'
     else 
-      redirect 'users/login'
+      redirect '/login'
     end 
   end
   
@@ -48,7 +48,6 @@ class CoffeeController < ApplicationController
       session[:user_id] = @user.id
       erb :'/coffees/edit'
     else
-      redirect
       erb :'users/login'
     end 
   end
