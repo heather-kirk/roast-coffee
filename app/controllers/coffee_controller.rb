@@ -52,7 +52,7 @@ class CoffeeController < ApplicationController
     end 
   end
   
-    patch '/coffees/:id/edit' do
+    patch '/coffees/:id' do
     #user submitted info to edit the order
     if logged_in? && current_user
       @coffee = Coffee.find_by_id(params[:id])
@@ -65,7 +65,7 @@ class CoffeeController < ApplicationController
     end 
   end
   
-  delete '/coffees/:id/edit' do
+  delete '/coffees/:id/delete' do
     #delete order
     if logged_in? && current_user
       @coffee = Coffee.find_by_id(params[:id])
