@@ -1,16 +1,5 @@
 class CoffeeController < ApplicationController
   
-  get '/coffees/new' do
-    #new order for the coffee 
-    if logged_in? && current_user
-      @user = current_user
-      session[:user_id] = @user.id
-      erb :'/coffee/new' 
-    else
-      redirect '/login'
-    end 
-  end
-  
   get '/coffees' do
     #track all their orders
     if logged_in? && current_user
@@ -22,6 +11,18 @@ class CoffeeController < ApplicationController
       redirect '/login'
     end 
   end 
+  
+  get '/coffees/new' do
+    #new order for the coffee 
+    if logged_in? && current_user
+      @user = current_user
+      session[:user_id] = @user.id
+      erb :'/coffee/new' 
+    else
+      redirect '/login'
+    end 
+  end
+  
   
   post '/coffees' do
     @coffees = Coffee.create(flavor: params[:flavor], price: params[:price])
@@ -65,7 +66,7 @@ class CoffeeController < ApplicationController
     end 
   end
   
-  delete '/coffees/:id/delete' do
+  get '/coffees/:id/delete' do
     #delete order
     if logged_in? && current_user
       @coffee = Coffee.find_by_id(params[:id])

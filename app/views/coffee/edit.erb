@@ -3,7 +3,7 @@
 <h3> <%= @coffee.price %></h3>
 
 <form action="/coffees/<%= @coffee.id %>" method="POST">
-  <label>Flavor:  <%=@coffee.flavor%></label>
+  <label>Flavor:  <%= @coffee.flavor%></label>
   <label>Price <%=@coffee.price %></label>
   <input type="hidden" id="hidden" name="_method" value="PATCH">
   <input type="submit" value="Edit Coffee Order">
