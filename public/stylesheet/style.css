@@ -14,7 +14,13 @@ body {
   position: relative;
   top: 5px;
   width: 100%;
- 
+ }
+
+.login {
+  float: right;
+  font-family: Helvetica;
+  font-size: .7vw;
+  margin-top: 10px;
 }
 
 #logo{
@@ -22,25 +28,22 @@ body {
   padding: 0;
 }
 
-nav {
-  height: 20;
-  float: right;
-}
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding-right: 15px;
+  margin: 0px;
+  float: right;
+  
 }
 
 li {
   display: inline;
   color: #967259;
+  margin-right: 80px;
 }
-a {
 
-  padding: 8px;
-}
+
 .main-page {
   font-family: Helvetica;
   position: absolute;
@@ -65,4 +68,15 @@ h3 {
 p {
   font-size: 1.2vw;
   width: 400px;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 32px;
+  color: #38220f;
+  font-family: Helvetica;
 }
