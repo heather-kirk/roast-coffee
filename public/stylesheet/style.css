@@ -65,17 +65,17 @@ h2,h3,p,main-page {
   color: white;
 }
 
-h2 {
+.main-page h2 {
   font-size: 5.5vw;
   width: 570px;
 }
 
-h3 {
+.main-page h3 {
   font-size: 2.2vw;
   width: 570px;
 }
 
-p {
+.main-page p {
   font-size: 1.2vw;
   width: 400px;
 }
@@ -101,13 +101,13 @@ p {
   height: 100%;
   
 }
+
 .signup {
   float: right;
   font-family: Helvetica;
   width: 40%;
   height: 58%;
   position: absolute;
-  bottom: 0px;
   right: 250px;
   margin: 50px auto; 
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -117,16 +117,25 @@ p {
 	display: block;
 }
 
-.signup-text  {
+.signup-text {
   background: #38220f;
   color: #ece0d1;
-  width: 90%;
-  margin: 0 auto;
-  padding: 20px;
+  margin-left: 28px;
+  width: 97%;
+  padding: 12px;
+}
+
+.signup-text p{
+  font-size: 1vw;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+.signup-form {
+  margin-left: 50px;
 }
 
  .signup-form input[type=text]{
-  width: 30%;
+  width: 33%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -151,7 +160,7 @@ p {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 18px 40px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
