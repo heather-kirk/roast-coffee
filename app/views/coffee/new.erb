@@ -1,16 +1,27 @@
-
+<div class="new-wrapper">
+<img class="bean" src="/images/coffee-bean.jpg" alt="coffee bean">
 <div id="new">
-<h1> YAS. Welcome to Flavortown! </h1>
-<p> So, you signed up queen? What's next?</p>
+<h1> YAS QUEEN. Welcome to Flavortown! </h1>
+<p> So, you signed up and you're probably wondering, "What's next?"</p>
 <p> Fill out this form below to get your first coffee! </p>
 
-<form action="/coffees" method="POST">
-  <label for="flavor">Flavor </label>
-  <input type="text" name="flavor"  value="flavor">
-  <label for="price">price</label>
-  <input type="text" name="price"  value="price">
+<form action="/coffees" id="custom-pick" method="POST">
+  <label for="flavor">I like my coffees to taste:</label>
+  <select name="custom-pick" id="flavor" form="custom-pick">
+  <option value="enzymatic">Fruity, Floral, Herbal</option>
+  <option value="sugar">Nutty, Caramel, Chocolate</option>
+  <option value="dry">Spicy, Smoky, Woody</option> 
+  </select> <br>
+  <label for"price">My coffee level:</label>
+  <select name="custom-pick" id="price" form="custom-pick">
+  <option value="work">Morning Pick-Me-Up 9.99/mo</option>
+  <option value="casual">The Filthy Casual 9.99/wk</option>
+  <option value="addict">The Addict 19.99/wk</option>
+  <option value="expert">The Connoisseur 29.99/wk</option>
+  </select> <br>
   <input type="submit" value="Submit">
 </form>
 
 <a href="/logout">Bye Felicia!</a>
+</div>
 </div>

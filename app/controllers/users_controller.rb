@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     else
       @user = current_user
       session[:user_id] = @user.id 
-      redirect '/coffees'
+      redirect '/coffees/new'
     end
   end
   
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if params[:username] != "" && params[:password] != ""
       @user = User.create(username: params[:username], password: params[:password])
       session[:user_id] = @user.id
-      redirect '/coffees'
+      redirect '/coffees/new'
     else 
       redirect '/signup'
     end 
