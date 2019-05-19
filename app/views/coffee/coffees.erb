@@ -1,6 +1,11 @@
-<% @user.coffees.each do |coffee| %>
-<%= coffee.flavor %>
-<%= coffee.price %>
+
+
+<h1> Welcome back <%=@user.username %>!</h1>
+<h2> Here are your upcoming orders:</h2>
+
+<p><% @user.coffees.each do |coffee| %></p>
+<p><%= coffee.flavor %> </p>
+<p><%= coffee.price %> </p>
 <% end %>
 
 
