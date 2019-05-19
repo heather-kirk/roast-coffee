@@ -28,7 +28,6 @@ class CoffeeController < ApplicationController
     @user = current_user
     if logged_in? && params[:flavor] !="" && params[:price] !=""
     @coffees = Coffee.create(flavor: params[:flavor], price: params[:price])
-    binding.pry
     @user.coffees << @coffees 
     redirect '/coffees'
     else 
@@ -66,7 +65,7 @@ class CoffeeController < ApplicationController
       @user = current_user
       session[:user_id] = @user.id
       @coffee.save
-      redirect '/coffees/:id'
+      redirect "/coffees/#{@coffee.id}"
     else 
       redirect '/login'
     end 

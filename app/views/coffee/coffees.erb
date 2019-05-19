@@ -5,8 +5,9 @@
 <p><% @user.coffees.each do |coffee| %></p>
 <p><%= coffee.flavor %> </p>
 <p><%= coffee.price %> </p>
+<a href="<%="/coffees/#{coffee.id}"%>" class="button"> Click for more details</a>
 <% end %>
 
-
+<h3>If you need to make another order, please refer back to your order form <a href="/coffees/new">here </a>
 
 <a href="/logout">Click here to log out</a>

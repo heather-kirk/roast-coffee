@@ -2,9 +2,14 @@
 <h3> <%= @coffee.flavor %></h3>
 <h3> <%= @coffee.price %></h3>
 
-<form action="/coffees/<%= @coffee.id%>/edit>" method="POST">
-  <label>Flavor:  <%= @coffee.flavor%></label>
-  <label>Price <%=@coffee.price %></label>
+<form action="/coffees/<%=@coffee.id%>" method="POST">
+  <label>Change Flavor:  <%= @coffee.flavor%></label>
+  <label>Change Your Subscription: <%=@coffee.price %></label>
   <input type="hidden" id="hidden" name="_method" value="PATCH">
   <input type="submit" value="Edit Coffee Order">
+</form>
+
+<form action="/coffees/<%=@coffee.id%>/delete">
+<input type="hidden" id="hidden" name="_method" value="Delete">
+<input type="submit" value="Delete">
 </form>
