@@ -25,9 +25,15 @@ class CoffeeController < ApplicationController
   
   
   post '/coffees' do
+    @user = current_user
+    if logged_in? && params[:flavor] !="" && params[:price] !=""
     @coffees = Coffee.create(flavor: params[:flavor], price: params[:price])
-    @coffees.save
+    binding.pry
+    @user.coffees << @coffees 
     redirect '/coffees'
+    else 
+    redirect '/coffee/new'
+    end 
   end 
   
   get '/coffees/:id' do
