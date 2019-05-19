@@ -108,6 +108,14 @@ p {
   box-sizing: border-box;
 }
 
+.signup {
+  float: right;
+  font-family: Helvetica;
+  background: #967259;
+  color: #ece0d1;
+  width:50%;
+  height: 55%;
+}
 .signup input[type=password] {
   width: 30%;
   padding: 12px 20px;
