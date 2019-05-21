@@ -179,14 +179,57 @@ h2,h3,p,main-page {
 
 #new {
   position: absolute;
-  left: 425px;
+  left: 555px;
   top: 500px;
   background-color: #ece0d1;
-  width: 50%;
-  height: 60%;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  width: 35%;
+  height: 65%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.33);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.33);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.33);
 	padding: 30px;
 	display: block;
+}
+
+#new h1 {
+  font-family: Helvetica;
+  font-size: 2vw;
+  margin: 0 auto;
+  padding: 20px 27px;
+}
+
+.new-form {
+  margin-left: 50px;
+  border-color: #38220f;
+}
+
+.new-form label{
+  font-family: Helvetica;
+}
+
+ .new-form select{
+  width: 40%;
+  padding: 10px 20px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+.new-form input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 18px 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add a background color to the submit button on mouse-over */
+.new-form input[type=submit]:hover {
+  background-color: #45a049;
 }
