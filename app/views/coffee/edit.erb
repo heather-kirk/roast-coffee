@@ -4,7 +4,18 @@
 
 <form action="/coffees/<%=@coffee.id%>" method="POST">
   <label>Change Flavor:  <%= @coffee.flavor%></label>
+  <select name="flavor" id="flavor" >
+  <option value="Fruity, Floral, Herbal">Fruity, Floral, Herbal</option>
+  <option value="Nutty, Caramel, Chocolate">Nutty, Caramel, Chocolate</option>
+  <option value="Spicy, Smoky, Woody">Spicy, Smoky, Woody</option> 
+  </select> <br>
   <label>Change Your Subscription: <%=@coffee.price %></label>
+  <select name="price" id="price" >
+  <option value="Morning Pick-Me-Up 9.99/mo">Morning Pick-Me-Up 9.99/mo</option>
+  <option value="The Filthy Casual 9.99/w">The Filthy Casual 9.99/wk</option>
+  <option value="The Addict 19.99/wk">The Addict 19.99/wk</option>
+  <option value="The Connoisseur 29.99/wk">The Connoisseur 29.99/wk</option>
+  </select> <br>
   <input type="hidden" id="hidden" name="_method" value="PATCH">
   <input type="submit" value="Edit Coffee Order">
 </form>

@@ -35,7 +35,6 @@ body {
   padding: 0;
 }
 
-
 ul {
   list-style-type: none;
   margin: 0px;
@@ -130,6 +129,7 @@ h2,h3,p,main-page {
   margin-left: 10px;
   padding-left: 10px;
 }
+
 .signup-form {
   margin-left: 50px;
 }
@@ -144,7 +144,6 @@ h2,h3,p,main-page {
   box-sizing: border-box;
 }
 
-
 .signup-form input[type=password] {
   width: 30%;
   padding: 12px 20px;
@@ -157,7 +156,7 @@ h2,h3,p,main-page {
 /* Style the submit button */
 .signup-form input[type=submit] {
   width: 30%;
-  background-color: #4CAF50;
+  background-color: #38220f;
   color: white;
   padding: 14px 20px;
   margin: 18px 40px;
@@ -168,7 +167,7 @@ h2,h3,p,main-page {
 
 /* Add a background color to the submit button on mouse-over */
 .signup-form input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #967259;
 }
 
 .bean {
@@ -197,7 +196,7 @@ h2,h3,p,main-page {
 #new h1 {
   font-family: Helvetica;
   font-size: 2.5vw;
-  margin: 0 auto;
+  margin: 7px 145px;
   padding: 20px 27px;
   color: #634832;
   }
@@ -205,20 +204,25 @@ h2,h3,p,main-page {
 #new h2{
   font-family: Helvetica;
   color: #634832;
-  padding: 20px 27px;
-  margin: 0 auto;
+  padding: 13px 117px;
+  margin: 0 57px;
 }
 
 #new p{
   font-family: Helvetica;
   font-size: 1.1vw;
-  margin: 0 auto;
-  padding: 7px 27px;
+  margin: 7px 0;
+  padding: 5px 27px;
   color: #967259;
 }
 
+#new a{
+  position: relative;
+  top: 20px;
+  padding-left: 90px;
+}
 .new-form {
-  padding-top: 37px;
+  padding-top: 27px;
   margin-left: 50px;
  }
 
@@ -239,10 +243,10 @@ h2,h3,p,main-page {
 /* Style the submit button */
 .new-form input[type=submit] {
   width: 30%;
-  background-color: #4CAF50;
+  background-color: #38220f;
   color: white;
   padding: 14px 20px;
-  margin: 22px 140px;
+  margin: 28px 140px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -250,5 +254,92 @@ h2,h3,p,main-page {
 
 /* Add a background color to the submit button on mouse-over */
 .new-form input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #967259;
+}
+
+.coffees {
+  background-color: #38220f;
+  width: 100%;
+  height: 100%;
+}
+
+#edit {
+  position: absolute;
+  left: 555px;
+  top: 500px;
+  background-color: #ece0d1;
+  width: 35%;
+  height: 65%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.33);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.33);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.33);
+	padding: 30px;
+	display: block;
+	border-style: inset;
+  border-width: 6px;
+  border-color: #38220f;
+}
+
+#edit h1 {
+  font-family: Helvetica;
+  font-size: 2.5vw;
+  margin: 7px 145px;
+  padding: 20px 27px;
+  color: #634832;
+  }
+  
+#edit h2{
+  font-family: Helvetica;
+  color: #634832;
+  padding: 13px 117px;
+  margin: 0 57px;
+}
+
+#edit p{
+  font-family: Helvetica;
+  font-size: 1.1vw;
+  margin: 7px 0;
+  padding: 5px 27px;
+  color: #967259;
+}
+
+#edit a{
+  position: relative;
+  top: 20px;
+  padding-left: 90px;
+}
+.edit-form {
+  padding-top: 27px;
+  margin-left: 50px;
+ }
+
+.edit-form label{
+  font-family: Helvetica;
+}
+
+ .edit-form select{
+  width: 40%;
+  padding: 10px 20px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+.edit-form input[type=submit] {
+  width: 30%;
+  background-color: #38220f;
+  color: white;
+  padding: 14px 20px;
+  margin: 28px 140px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add a background color to the submit button on mouse-over */
+.edit-form input[type=submit]:hover {
+  background-color: #967259;
 }

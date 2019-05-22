@@ -1,5 +1,5 @@
 
-
+<div class="coffees">
 <h1> Welcome back <%=@user.username %>!</h1>
 <h2> Here are your upcoming orders:</h2>
 <p><% @user.coffees.each do |coffee| %></p>
@@ -8,6 +8,7 @@
 <a href="<%="/coffees/#{coffee.id}"%>" class="button"> Click for more details</a>
 <% end %>
 
-<h3>If you need to make another order, please refer back to your order form <a href="/coffees/new">here </a>
+<h3>If you need to make another order, please refer back to order form <a href="/coffees/new">here </a>
 
 <a href="/logout">Click here to log out</a>
+</div>
