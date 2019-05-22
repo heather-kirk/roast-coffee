@@ -17,6 +17,7 @@ body {
   width: 100%;
  }
 
+
 .login {
   float: right;
   font-family: Helvetica;
@@ -258,9 +259,53 @@ h2,h3,p,main-page {
 }
 
 .coffees {
-  background-color: #38220f;
-  width: 100%;
+  padding: 50px 0px;
+  position: absolute;
+  top: 325px;
+  left: 265px;
+  width: 70%;
+  height: 50%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.33);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.33);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.33);
+}
+
+.list {
+   font-family: Helvetica;
+}
+
+.list h1, h2, p {
+  color: #634832; 
+}
+
+.coffees h1{
+  font-size: 2.7vw;
+  padding-left: 270px;
+}
+
+.coffees h2{
+  font-size: 1.5vw;
+  padding-left: 270px;
+  }
+  
+.coffees p{
+  font-size: 1vw;
+  padding-left: 270px;
+  margin-top: 40px;
+}
+
+a.button {
+  margin-left: 300px;
+  margin-top: 30px;
+}
+.info {
   height: 100%;
+  background-color: #634832;
+  color: 	#ece0d1;
+}
+
+.info p {
+  font-size: .7vw;
 }
 
 #edit {
