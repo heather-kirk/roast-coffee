@@ -189,19 +189,38 @@ h2,h3,p,main-page {
 	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.33);
 	padding: 30px;
 	display: block;
+	border-style: inset;
+  border-width: 6px;
+  border-color: #38220f;
 }
 
 #new h1 {
   font-family: Helvetica;
-  font-size: 2vw;
+  font-size: 2.5vw;
   margin: 0 auto;
   padding: 20px 27px;
+  color: #634832;
+  }
+  
+#new h2{
+  font-family: Helvetica;
+  color: #634832;
+  padding: 20px 27px;
+  margin: 0 auto;
+}
+
+#new p{
+  font-family: Helvetica;
+  font-size: 1.1vw;
+  margin: 0 auto;
+  padding: 7px 27px;
+  color: #967259;
 }
 
 .new-form {
+  padding-top: 37px;
   margin-left: 50px;
-  border-color: #38220f;
-}
+ }
 
 .new-form label{
   font-family: Helvetica;
@@ -223,7 +242,7 @@ h2,h3,p,main-page {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
-  margin: 18px 40px;
+  margin: 22px 140px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
