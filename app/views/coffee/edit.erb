@@ -1,15 +1,20 @@
-<h2>Welcome</h2>
-<h3> <%= @coffee.flavor %></h3>
-<h3> <%= @coffee.price %></h3>
+<div class="new-wrapper">
+<img class="bean" src="/images/coffee-bean.jpg" alt="coffee bean">
+<div id="edit">
+<h1> Oh noooo! </h1>
+<h2> Below is your current order. If you don't like it, just use the form below before it ships.</h2>
+<p> <%= @coffee.flavor %></p>
+<p> <%= @coffee.price %></p>
 
+<div class="edit-form">
 <form action="/coffees/<%=@coffee.id%>" method="POST">
-  <label>Change Flavor:  <%= @coffee.flavor%></label>
+  <label>Change Flavor:</label>
   <select name="flavor" id="flavor" >
   <option value="Fruity, Floral, Herbal">Fruity, Floral, Herbal</option>
   <option value="Nutty, Caramel, Chocolate">Nutty, Caramel, Chocolate</option>
   <option value="Spicy, Smoky, Woody">Spicy, Smoky, Woody</option> 
   </select> <br>
-  <label>Change Your Subscription: <%=@coffee.price %></label>
+  <label>Change Your Subscription:</label>
   <select name="price" id="price" >
   <option value="Morning Pick-Me-Up 9.99/mo">Morning Pick-Me-Up 9.99/mo</option>
   <option value="The Filthy Casual 9.99/w">The Filthy Casual 9.99/wk</option>
@@ -17,10 +22,12 @@
   <option value="The Connoisseur 29.99/wk">The Connoisseur 29.99/wk</option>
   </select> <br>
   <input type="hidden" id="hidden" name="_method" value="PATCH">
-  <input type="submit" value="Edit Coffee Order">
+  <input type="submit" name="editbutton" id="editbutton" value="Edit Coffee Order">
 </form>
 
 <form action="/coffees/<%=@coffee.id%>/delete">
 <input type="hidden" id="hidden" name="_method" value="Delete">
-<input type="submit" value="Delete">
+<input type="submit" name="delbutton" id="delbutton" value="Delete">
 </form>
+</div>
+</div> 
