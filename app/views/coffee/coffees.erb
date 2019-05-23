@@ -1,19 +1,21 @@
 
 <div class="coffees">
   <div class="list">
+    <img class="bg" src="/images/coffeebg.jpg" alt="coffee background">
 <h1> Welcome back <%=@user.username %>!</h1>
 <h2> Here are your upcoming orders:</h2>
-<p><% @user.coffees.each do |coffee| %></p>
-<p>Flavor: <%= coffee.flavor %> </p>
-<p>Price: <%= coffee.price %> </p>
-<a href="<%="/coffees/#{coffee.id}"%>" class="button"> Click for more details</a>
+<h3><% @user.coffees.each do |coffee| %></h3>
+<h3>Flavor: <%= coffee.flavor %> </h3>
+<h3>Price: <%= coffee.price %> </h3>
+<a href="<%="/coffees/#{coffee.id}"%>" class="button1"> Click for more details</a>
 <% end %>
- </div>
-<div class="info">
+<div id="info">
   <p>If you're not happy with your order, feel free to please contact us:</p>
   <p><i style='font-size:24px' class='fas'>&#xf095;</i> Call us: (800)-555-1234</p>
   <p><i style='font-size:24px' class='fas'>&#xf075;</i> Email us: customerservice@roast.com</p>
   <p>If you need to make another order, please refer back to order form <a href="/coffees/new">here </p>
-  <a href="/logout">Click here to log out</a>
+  <a href="/logout" class="button2">Click here to log out</a>
+  </div>
+</div>
 </div>
 </div>
