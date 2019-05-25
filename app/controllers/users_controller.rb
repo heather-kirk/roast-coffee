@@ -32,11 +32,12 @@ class UsersController < ApplicationController
   
   post '/login' do
     if params[:username] != "" && params[:password] != ""
-      @user = User.create(username: params[:username], password: params[:password])
-      session[:user_id] = @user.id
+    if @user = User.find_by_id(params[:id]) && @user.authenticate(params[:password])
+    session[:user_id] = @user.id
       redirect '/coffees'
     else 
       redirect '/login'
+      end 
     end 
   end 
   
