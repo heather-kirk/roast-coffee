@@ -31,16 +31,16 @@ class UsersController < ApplicationController
   end 
   
   post '/login' do
-    if params[:username] != "" && params[:password] != ""
-    if @user = User.find_by_id(params[:id]) && @user.authenticate(params[:password])
-    session[:user_id] = @user.id
+    @user = User.find_by(username: params[:username])
+    if @user && @user.authenticate(params[:password]) && params[:username] != "" && params[:password] != ""
+      session[:user_id] = @user.id
       redirect '/coffees'
     else 
       redirect '/login'
       end 
     end 
-  end 
-  
+ 
+ 
   get '/logout' do 
     session.clear
     redirect '/'

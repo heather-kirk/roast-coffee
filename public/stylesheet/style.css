@@ -581,7 +581,6 @@ input#delbutton{
   box-sizing: border-box;
 }
 
-/* Style the submit button */
 .login-form input[type=submit] {
   width: 26%;
   background-color: #38220f;
@@ -594,7 +593,5 @@ input#delbutton{
   cursor: pointer;
 }
 
-/* Add a background color to the submit button on mouse-over */
 .login-form input[type=submit]:hover {
   background-color: #967259;
-}
