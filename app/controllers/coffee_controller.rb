@@ -61,10 +61,12 @@ class CoffeeController < ApplicationController
     patch '/coffees/:id' do
     #user submitted info to edit the order
     if logged_in? && current_user
-      @coffee = Coffee.find_by_id(params[:id])
       @user = current_user
       session[:user_id] = @user.id
-      @coffee.save
+      @coffee = Coffee.find_by_id(params[:id])
+      @coffee.flavor = params[:flavor]
+      @coffee.price = params[:price]
+      @coffee.save 
       redirect "/coffees/#{@coffee.id}"
     else 
       redirect '/login'

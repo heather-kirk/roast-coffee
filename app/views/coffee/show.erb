@@ -1,13 +1,13 @@
 <div class="coffees2">
   <div class="list">
   <img class="bg" src="/images/coffeebg.jpg" alt="coffee background">
-<h1>Your Order</h1>
-<h2>See below for your current order.</h2>
-<h3>If you're unsatisfied, you can totally edit before shipping.</h3>
+<h1>OMG. Great choice! </h1>
+<h2>See below for your current order!</h2>
+<h3>Oh, btw. You can totally edit before shipping.</h3>
 <h4> <%= @coffee.flavor %></h4>
 <h4> <%= @coffee.price %></h4>
 
-<p> If you're unsatisfied with your order, please click below to edit!</p>
+<p> If you were a hot mess and messed up your order, please click below to edit!</p>
 <form action="/coffees/<%=@coffee.id%>/edit">
 <input type="hidden" id="hidden" name="_method" value="Delete">
 <input type="submit" value="Edit or Delete">
