@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'activerecord', '~> 4.2', '>= 4.2.6', :require => 'active_record'
+gem 'activerecord', '~> 6.1', :require => 'active_record'
 gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
 gem 'pry'
 gem 'pry-nav'
